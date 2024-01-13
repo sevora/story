@@ -22,7 +22,7 @@ let mouseVectorLatest: Vector | null = null;
 // these are game-loop related variables
 let now = Date.now();
 let then = now;
-let fps = isMobile() ? 30 : 120;
+let fps = isMobile() ? 60 : 120;
 
 // these are our custom objects
 const watch = new InteractiveWatch();
