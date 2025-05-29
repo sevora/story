@@ -26,32 +26,32 @@
     <title>Turn the dial</title>
     
     <!-- These are the stylesheets -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 
     <!-- Attempt to preload the watch resources -->
-    <link rel="prefetch" href="assets/watch/body.png" />
-    <link rel="prefetch" href="assets/watch/hour.png" />
-    <link rel="prefetch" href="assets/watch/minute.png" />
-    <link rel="prefetch" href="assets/watch/second.png" />
+    <link rel="prefetch" href="/assets/watch/body.png" />
+    <link rel="prefetch" href="/assets/watch/hour.png" />
+    <link rel="prefetch" href="/assets/watch/minute.png" />
+    <link rel="prefetch" href="/assets/watch/second.png" />
 <body>
     <img src="/assets/banners/og.jpg" width="630" class="no-display">
     <!-- The image above is an attempt to get the banner to display right -->
     <header>
         <a class="button emphasized muted" href="https://journey.sevora.tech" target="_blank">
-            <img src="images/icons/RSS_black.png" alt="Online Journal">
+            <img src="/assets/icons/RSS_black.png" alt="Online Journal">
         </a>
 
         <a class="button emphasized muted" href="mailto:ralph.louis.g@gmail.com">
-            <img src="images/icons/Gmail_black.png" alt="Gmail">
+            <img src="/assets/icons/Gmail_black.png" alt="Gmail">
         </a>
         
-        <a class="button emphasized muted" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsevora.tech&via=%40ralphlouisgopez&text=This%20is%20quite%20creative%21">
-            <img src="images/icons/Twitter_black.png" alt="Twitter">
+        <a class="button emphasized muted" href="https://linkedin.com/in/ralphlouisgopez" target="_blank">
+            <img src="/assets/icons/LinkedIN_black.png" alt="Twitter">
         </a>
         
         <a class="button emphasized muted" href="https://github.com/sevora" target="_blank">
-            <img src="images/icons/Github_black.png" alt="Github">
+            <img src="/assets/icons/Github_black.png" alt="Github">
         </a>
     </header>
     <noscript class="spacer">
@@ -92,7 +92,7 @@
                     Doing coding challenges and following along tutorials with great explanation. I do and do. I ask and ask. Until
                     there is no more doubt.
                 </p>
-                <img class="low-margin" data-scroll-class="animate__animated animate__tada animate__slow" src="images/extra/works.jpg" width="450"/>
+                <img class="low-margin" data-scroll-class="animate__animated animate__tada animate__slow" src="/assets/images/works.jpg" width="450"/>
             </article>
 
             <article class="spacer">
@@ -102,13 +102,13 @@
                     I ended up learning on my own, every single day I could. Obsessing over some logic problem until I can't
                     think right anymore.
                 </p>
-                <img class="low-margin" data-scroll-class="animate__animated animate__slideInLeft animate__slow" src="images/extra/self-study.jpg" width="400" />
+                <img class="low-margin" data-scroll-class="animate__animated animate__slideInLeft animate__slow" src="/assets/images/self-study.jpg" width="400" />
             </article>
             
             <article class="spacer">
                 <h2 class="no-margin">I am a high-school student</h2>
                 <p>Although, the year has just nearly begun, I've already made up my mind on a few things. Like what course I'll take on college.</p>
-                <img class="low-margin" data-scroll-class="animate__animated animate__backInDown animate__slow" src="images/extra/highschool.jpg" width="250"/>
+                <img class="low-margin" data-scroll-class="animate__animated animate__backInDown animate__slow" src="/assets/images/highschool.jpg" width="250"/>
             </article>
 
             <p class="center spacer" data-scroll-class="animate__animated animate__lightSpeedInRight animate__slow">You are going to the past...</p>
@@ -122,7 +122,7 @@
             <article class="spacer">
                 <h2 class="no-margin" data-scroll-class="animate__animated animate__zoomIn animate__slow">I am a 3rd year college student</h2>
                 <p>I am taking Computer Science wanting to make amazing games one day. Of course, I'm aiming to be crazy rich as well. But most of all, it's ambition and heart that matters. Money isn't meant to be chased forever.</p>
-                <img class="low-margin" src="images/extra/college.jpg" width="300"/>
+                <img class="low-margin" src="/assets/images/college.jpg" width="300"/>
             </article>
 
             <article class="spacer">
@@ -131,7 +131,7 @@
                    These are the people that I know are going to do their best for their dreams.
                    They are a bit different and that's why you can count on them.
                 </p>
-                <img class="low-margin" src="images/extra/friends.jpg" width="450"/>
+                <img class="low-margin" src="/assets/images/friends.jpg" width="450"/>
             </article>
 
             <article class="spacer">
@@ -139,7 +139,7 @@
                 <p>
                     Never strict, always caring. She took care of me in a way that I believe she trusts that I'll do good as a person. I intend to take care of that trust. 
                 </p>
-                <img class="low-margin" src="images/extra/family.jpg" width="350"/>
+                <img class="low-margin" src="/assets/images/family.jpg" width="350"/>
             </article>
 
             <article class="spacer">
@@ -149,7 +149,7 @@
                     If you're interested in learning more about me, you could take a look at my <a class="button" style="font-size: inherit;" target="_blank" href="https://blog.ralphlouisgopez.com/">blog</a>,
                     which I hope is even a bit entertaining, or go directly to my <a class="button" style="font-size: inherit;" target="_blank" href="https://github.com/sevora">Github account</a>.
                 </p>
-                <img class="low-margin" src="images/extra/ralph.jpg" height="300"/>
+                <img class="low-margin" src="/assets/images/ralph.jpg" height="300"/>
             </article>
             
             <article class="spacer">
@@ -161,6 +161,6 @@
         </div>
         <canvas width="600" height="600" class="hidden"></canvas>
     </div>
-    <script src="assets/bundle/index.min.js"></script>
+    <script type="module" src="/src/index.ts"></script>
 </body>
 </html>
