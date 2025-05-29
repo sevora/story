@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "story",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the story of Sevora presented in a unique way using creative design with the theme of time.",
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --mode=development",
