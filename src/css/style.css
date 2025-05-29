@@ -1,3 +1,5 @@
+@import "animate.css";
+
 /* Default values for extremely small screens- foldables */
 :root {
     --text: #292b2b;

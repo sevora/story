@@ -1,4 +1,3 @@
-import 'animate.css';
 import { SCROLL_DIFFERENCE_CHECK } from './settings';
 import { atan2 } from './math';
 import { isMobile } from './mobile';
@@ -6,11 +5,11 @@ import { EfficientViewportObserver } from './viewport';
 import { InteractiveWatch } from './watch';
 
 // these are all the DOM
-const root = document.querySelector('#root')!;
-const scrollable = document.querySelector('#scrollable')!;
-const centerpoint = document.querySelector('#centerpoint')!;
-const canvas = document.querySelector('canvas')!;
-const context = canvas.getContext('2d');
+const root = document.querySelector('#root') as HTMLDivElement;
+const scrollable = document.querySelector('#scrollable') as HTMLDivElement;
+const centerpoint = document.querySelector('#centerpoint') as HTMLAnchorElement;
+const canvas = document.querySelector('canvas') as HTMLCanvasElement;
+const context = canvas.getContext('2d') as CanvasRenderingContext2D;
 
 // finally this is a scroll-related variable
 let previousScrollTop: number = 0;
@@ -157,7 +156,7 @@ function resetMouseState() {
  */
 function attachEventListeners() {
     // this allows us to use smooth-scroll on anchor tags
-    document.querySelectorAll('a.smooth-scroll').forEach((element: HTMLAnchorElement) => {
+    document.querySelectorAll('a.smooth-scroll').forEach((element) => {
 
         // automatically binds click event listener for smooth scroll
         element.addEventListener('click', (event) => {
@@ -165,7 +164,7 @@ function attachEventListeners() {
 
             // we get the target property and the actual element it is referring to
             const targetProperty = element.getAttribute('href');
-            const targetElement: HTMLElement = document.querySelector( element.getAttribute('href') );
+            const targetElement = document.querySelector( element.getAttribute('href')! ) as HTMLElement;
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
             targetElement.focus({ preventScroll: true });
             
@@ -176,7 +175,7 @@ function attachEventListeners() {
             animationObserver.resetAnchor();
             latestObserver.resetAnchor();
             targetElement.classList.remove('hidden');
-            targetElement.classList.add(...(targetElement as HTMLElement).dataset.scrollClass.split(' '));
+            targetElement.classList.add(...(targetElement as HTMLElement).dataset.scrollClass!.split(' '));
             watch.resetDial();
         });
     });
@@ -224,8 +223,8 @@ function attachEventListeners() {
     window.addEventListener('orientationchange', () => window.dispatchEvent(new Event('resize')) );
 
     // this is for our animation on custom scroll event
-    window.addEventListener('customscroll', animationObserver.onViewportChange( (isInViewport, element: HTMLElement) => {
-        const classes = element.dataset.scrollClass.split(' ');
+    window.addEventListener('customscroll', animationObserver.onViewportChange( (isInViewport, element) => {
+        const classes = (element as HTMLElement).dataset.scrollClass!.split(' ');
         
         // if element is in viewport we make it visible and apply animation 
         if (isInViewport) {
